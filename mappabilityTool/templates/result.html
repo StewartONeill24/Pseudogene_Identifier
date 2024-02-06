@@ -1,0 +1,52 @@
+{% extends 'index.html' %}
+{% block content %}
+
+<script>
+    function imgchangefunc(a){
+        b = document.getElementsByClassName('theseareforfunc');
+        for (i = 0;i < b.length;i++){
+            b[i].style = 'display:none;'
+        }
+        document.getElementById('image_'+a.value).style = 'display:block;'
+    }
+</script>
+
+<div class="row justify-content-between">
+    <div class="col-sm-6"><br>
+        <h5 style="color: blue;">
+            <strong>
+                <a href="{% url 'index' %}">Home</a>
+            </strong>
+        </h5><hr>
+        <h4 style="color: blue;"><strong>
+        Overview of the mappability metric.
+        </strong></h4>
+    </div>
+</div><br><br>
+<center>
+    <div class="row">
+        <div class="col-sm-9">
+            {% for i in images %}
+                <img src="{{i.image_url}}" id="image_{{i.image_num}}" style="display: {{i.image_show}}" class="theseareforfunc">
+            {% endfor %}
+        </div>
+        <div class="col-sm-3">
+            <br><br>
+            <select id="imgselect" onchange="imgchangefunc(this)" class="form-control">
+                {% for i in images %}
+                <option value="{{i.image_num}}">{{i.image_name}}</option>
+                {% endfor %}
+            </select>
+        </div>
+    </div><br><hr>
+    <div class="row">
+        <div class="col-sm-12 text-center">
+            <h3>List of Papers written on {{gene}}</h3><br>
+            {% for i,j in list_of_papers.items %}
+                <a href="{{j}}" title="Click to view the paper" target="_blank">{{i}}</a><br>
+            {% endfor %}
+        </div>
+    </div>
+</center>
+
+{% endblock %}
