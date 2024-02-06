@@ -1,1 +1,13 @@
 .idea/
+__pycache__/
+*.pyc
+db.sqlite3
+venv/
+.venv/
+env/
+ENV/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
