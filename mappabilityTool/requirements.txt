@@ -1,5 +1,0 @@
-django==2.2
-pillow
-bs4
-lxml
-requests
