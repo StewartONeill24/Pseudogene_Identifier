@@ -1,5 +1,7 @@
-django==2.2
-pillow
-bs4
+Django==2.2
+Pillow
+beautifulsoup4
 lxml
 requests
+Biopython
+pybedtools
