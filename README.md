@@ -1,54 +1,56 @@
-#Pseudogene Identifier
+# Pseudogene Identifier
 
-###Overview
-The Pseudogene Identifier is a Django web application designed to identify pseudogenes by analyzing gene sequence mappability. This tool integrates with various bioinformatics resources to assess sequence homology, focusing on the likelihood of gene similarity with pseudogenes or repetitive regions. It also offers access to recent research articles related to the gene of interest, providing a comprehensive toolkit for researchers and clinicians in genetic analysis and testing.
+## Overview
+The Pseudogene Identifier is a Django web application engineered for identifying pseudogenes through the analysis of gene sequence mappability. This innovative tool leverages a variety of bioinformatics resources to evaluate sequence homology, particularly focusing on the probability of gene resemblance with pseudogenes or repetitive regions. Additionally, it facilitates access to the latest research articles pertaining to the gene of interest, thereby assembling an exhaustive toolkit for researchers and clinicians dedicated to genetic analysis and testing.
 
-###Features
-Gene Mappability Analysis: Calculates a mappability metric for genes to identify sequence similarity with pseudogenes.
-Literature Review: Provides links to the most recent research articles related to the gene of interest.
-Visualization: Generates plots to visually represent the mappability of gene sequences.
+## Features
+- **Gene Mappability Analysis**: Employs a mappability metric to discern sequence similarities with pseudogenes, enhancing the accuracy of genetic analyses.
+- **Literature Review**: Automatically curates and provides links to the latest scientific articles related to the gene of interest, supporting ongoing research and study.
+- **Visualization**: Offers graphical representations of gene mappability profiles, aiding in the intuitive understanding of analysis results.
 
-###Installation
-####Prerequisites
-Python 3.6 or higher
-Django 2.2
-Other Python libraries as listed in requirements.txt
+## Installation
 
-###Steps
-Clone the repository:
+### Prerequisites
+- Python version 3.6 or higher
+- Django version 2.2
+- Additional Python libraries as specified in `requirements.txt`
 
-git clone https://github.com/StewartONeill24/Pseudogene_Identifier.git
+### Setup Instructions
+1. **Clone the Repository**: Clone the Pseudogene Identifier project to your local machine using the following command:
+   ```
+   git clone https://github.com/StewartONeill24/Pseudogene_Identifier.git
+   ```
+2. **Navigate to the Project Directory**:
+   ```
+   cd Pseudogene_Identifier
+   ```
+3. **Install Dependencies**: Install the required Python libraries by running:
+   ```
+   pip install -r requirements.txt
+   ```
+4. **Initialize the Database**: Set up the database with Django migrations using:
+   ```
+   python manage.py migrate
+   ```
+5. **Launch the Development Server**: Start the Django development server to run the application:
+   ```
+   python manage.py runserver
+   ```
+6. **Access the Application**: Open a web browser and navigate to `http://127.0.0.1:8000/` to use the Pseudogene Identifier.
 
-Navigate to the project directory:
+## Usage
+To utilize the Pseudogene Identifier:
+1. Visit the homepage and input the HGNC symbol of the gene of interest.
+2. Click on the "Search" button to initiate the query.
+3. The results page will display the gene's mappability metric along with relevant research articles. Visualizations of the gene's mappability profile will be presented if available.
 
-cd Pseudogene_Identifier
+## Contributing
+We warmly welcome contributions to the Pseudogene Identifier project. To contribute:
+- **Propose Changes**: Utilize the GitHub pull request process for minor enhancements or corrections.
+- **Discuss Major Changes**: For significant modifications, please initiate a discussion by opening an issue. This allows for collaborative decision-making prior to the implementation of substantial alterations.
 
-Install the required dependencies:
+## License
+This project is released under the MIT License, promoting open-source accessibility and modification.
 
-pip install -r requirements.txt
-
-Run the Django migrations to set up the database:
-
-python manage.py migrate
-
-Start the Django development server:
-
-python manage.py runserver
-
-Open a web browser and go to http://127.0.0.1:8000/ to view the application.
-
-###Usage
-On the homepage, enter the HGNC symbol of the gene of interest in the provided text area.
-Click the "Search" button to submit the query.
-
-The results page will display the mappability metric for the gene and links to recent research articles. If available, a visualization of the gene's mappability profile will also be shown.
-
-###Contributing
-Contributions to the Pseudogene Identifier project are welcome. Please follow the standard GitHub pull request process to propose changes. For major changes, please open an issue first to discuss what you would like to change.
-
-###License
-MIT
-
-###Acknowledgements
-This project utilizes data and tools from NCBI, BioPython, and other open-source bioinformatics resources.
-Special thanks to all contributors and users of the Pseudogene Identifier project.
+## Acknowledgments
+Our heartfelt gratitude goes out to all individuals who have contributed to developing and refining the Pseudogene Identifier. Special acknowledgements are extended to the National Center for Biotechnology Information (NCBI), BioPython, and the numerous open-source bioinformatics resources that have made this project possible.
